@@ -1,0 +1,254 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+
+@font-face {
+  src: url("../assets/fonts/arsenal-regular.ttf");
+  font-family: 'Arsenal';
+}
+
+@font-face {
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+  font-family: 'montserrat';
+}
+
+@mixin title() {
+  font-family: 'Arsenal', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  
+  @media (max-width: $xl) {
+    font-size: 26px;
+  }
+}
+
+@mixin subtitle() {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 24px;
+
+  @media (max-width: $xl) {
+    font-size: 18px;
+  }
+}
+
+@mixin subtitle-1() {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 18px;
+
+  @media (max-width: $xl) {
+    font-size: 14px;
+  }
+}
+
+.clickable-state {
+  cursor: pointer;
+}
+
+header {
+  background-image: url("/assets/header.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 270px;
+}
+
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.main-card {
+  position: absolute;
+  top: 17%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(0, 0, 0, 0.38) 100%);
+  box-shadow: 11px 11px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 36px;
+  width: 460px;
+
+  img[alt="logo"] {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  &_title {
+    @include title();
+    margin-top: 34px;
+  }
+
+  &_subtitle {
+    @include subtitle();
+    margin-top: 20px;
+  }
+
+  &_subtitle_1 {
+    @include subtitle-1();
+    margin-top: 10px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: $xl) {
+    position: relative;
+    top: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 32px;
+  }
+}
+
+.custom-card {
+  background: linear-gradient(-90deg, #FFFFFF 0%, rgba(0, 0, 0, 0.38) 100%);
+  box-shadow: 11px 11px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 24px 46px;
+  width: 460px;
+
+  &-title {
+    @include title();
+    background: #FFFFFF;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding: 8px 10px;
+  }
+
+  &-subtitle {
+    @include subtitle();
+    margin-top: 36px;
+  }
+
+  @media (max-width: $xl) {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.custom-badge {
+  position: relative;
+  width: 260px;
+  background: #F5F5F5;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: 'Arsenal', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  padding: 12px 46px;
+  margin-top: 82px;
+  margin-bottom: 42px;
+  text-align: center;
+
+  @media (min-width: $xl) {
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 100%;
+      border: 2px solid black;
+      width: 200%;
+      height: 2px;
+      z-index: -1;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 100%;
+      border: 2px solid black;
+      width: 200%;
+      height: 2px;
+      z-index: -1;
+    }
+  }
+
+  @media (max-width: $xl) {
+    font-size: 20px;
+  }
+}
+
+.custom-dropdown {
+  background: rgba(0, 0, 0, 0.38);
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px 0;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  width: 200px;
+
+  &-box {
+    display: flex;
+    cursor: pointer;
+  }
+
+  span {
+    @include subtitle();
+    flex-grow: 1;
+    padding-left: 8px;
+  }
+
+  img:last-child {
+    transition: opacity 0.5ms;
+  }
+
+  &_item {
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: $xl) {
+    width: 100%;
+  }
+}
+
+.main-container {
+  @media (min-width: $xl) {
+    margin-top: 82px !important;
+  }
+}
+
+.works-container {
+  @media (min-width: $xl) {
+    & > div:not(&:first-child) {
+      margin-top: 65px;
+    }
+  }
+  @media (max-width: $xl) {
+    & > div {
+      margin-top: 24px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.custom-nav {
+  margin-top: 16px;
+
+  &__item {
+    @include subtitle();
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

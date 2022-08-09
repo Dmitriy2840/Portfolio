@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+          <div class="custom-dropdown mt-4 me-4 ms-4" @click="dropdown.state = !dropdown.state">
+            <div class="custom-dropdown-box">
+              <img :src="`./assets/icons/${currentLang.value}.svg`" :alt="currentLang.value" />
+              <span>
+                {{ currentLang.text }}
+              </span>
+              <img :src="`./assets/icons/arrow_${dropdown.state ? 'up' : 'down'}.svg`" alt="arrow_down" />
+            </div>
+            <div v-if="dropdown.state" class="mt-2">
+              <div v-for="lang of dropdownItems" :key="lang.value" class="custom-dropdown-box_item"
+                @click="selectLang(lang)">
+                <img :src="`./assets/icons/${lang.value}.svg`" :alt="lang.value" />
+                <span>
+                  {{ lang.text }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 d-xl-none d-flex justify-content-center">
+          <nav>
+            <ol class="breadcrumb custom-nav d-flex align-items-center">
+              <li class="breadcrumb-item custom-nav__item">
+                <a href="#about">
+                  Обо мне
+                </a>
+              </li>
+              <li class="breadcrumb-item custom-nav__item">
+                <a href="#works">
+                  Мои работы
+                </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="about" class="row main-container">
+        <div class="col-xl-5 col-12 d-flex justify-content-center">
+          <div class="main-card">
+            <img src="./assets/me.jpg" alt="logo" />
+            <span class="main-card_title">
+              Катерина Макуха
+            </span>
+            <span class="main-card_subtitle">
+              Веб-дизайнер
+            </span>
+            <span class="main-card_subtitle">
+              <img src="./assets/icons/location.svg" alt="location" />
+              Украина, Днепр
+            </span>
+            <span class="main-card_subtitle_1">
+              <a href="https://www.linkedin.com/" class="text-black">
+                LinkedIn
+              </a>
+            </span>
+            <span class="main-card_subtitle_1">
+              <a href="mailto:kateryna.makukha@gmail.com" class="text-black">
+                kateryna.makukha@gmail.com
+              </a>
+            </span>
+            <span class="main-card_subtitle_1">
+              <a href="tel: +380-50-770-80-18" class="text-black">
+                +380-50-770-80-18
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="col-xl-7 col-12">
+          <div class="custom-card">
+            <span class="custom-card-title">
+              Обо мне
+            </span>
+            <p class="custom-card-subtitle">
+              Привет меня зовут Екатерина и я UI/UX веб-дизайнер.
+              Разрабатываю дизайн для малого, среднего и крупного бизнеса.
+              Считаю, что сайт должен выполнять поставленные задачи, быть удобен и эстетичен.
+              Люблю понятные интерфейсы, поэтому предпочитаю минимализм.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row main-container">
+        <div class="col-md-6 col-12 d-flex justify-content-end">
+          <div class="custom-card">
+            <span class="custom-card-title">
+              НАВЫКИ
+            </span>
+            <ul class="custom-card-subtitle">
+              <li>
+                Графический дизайн
+              </li>
+              <li>
+                Фотография
+              </li>
+              <li>
+                Анимация
+              </li>
+              <li>
+                Макетирование
+              </li>
+              <li>
+                Figma
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-12 d-flex justify-content-center">
+          <div class="custom-card">
+            <span class="custom-card-title">
+              ОПЫТ РАБОТЫ
+            </span>
+            <p class="custom-card-subtitle">
+              Два года разрабатываю макеты для салона красоты,
+              различный дизайн приглашений на свадьбу, банеры, визитки, прайсы.
+
+              Полгода изучаю веб-дизайн, имею три проекта.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="works" class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="custom-badge">
+            Работы
+          </div>
+        </div>
+      </div>
+      <div class="row works-container">
+        <div class="col-12 d-flex justify-content-center">
+          <img src="./assets/works/1.jpg" alt="1" />
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <img src="./assets/works/2.jpg" alt="2" />
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <img src="./assets/works/3.jpg" alt="3" />
+        </div>
+        <div class="col-12">
+          <div class="row d-flex justify-content-xl-center">
+            <div class="col-xl-6 col-12 d-flex justify-content-xl-end">
+              <img src="./assets/works/4.jpg" alt="4" />
+            </div>
+            <div class="col-xl-5 col-12">
+              <div class="row">
+                <div class="col-12">
+                  <img src="./assets/works/5.jpg" alt="5" />
+                </div>
+                <div class="col-12" style="margin-top: 36px">
+                  <img src="./assets/works/6.jpg" alt="6" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-md-center">
+          <div class="row">
+            <div class="col-xl-6 col-12">
+              <img src="./assets/works/7.jpg" alt="7" />
+            </div>
+            <div class="col-xl-6 col-12">
+              <img src="./assets/works/8.jpg" alt="8" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="text-center m-5 mb-4">
+      © 2020-2022. Portfolio. Все права защищены <br />
+      Разработано в Figma.com
+    </footer>
+  </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    template: '',
+    data: {
+      dropdown: {
+        items: [
+          {
+            text: 'Українська',
+            value: 'UA'
+          },
+          {
+            text: 'США',
+            value: 'US'
+          },
+        ],
+        selected: 'UA',
+        state: false,
+      },
+    },
+    computed: {
+      dropdownItems() {
+        return this.dropdown.items.filter(v => v.value !== this.dropdown.selected);
+      },
+      currentLang() {
+        return this.dropdown.items.filter(v => v.value === this.dropdown.selected)[0];
+      }
+    },
+    methods: {
+      selectLang(lang) {
+        this.dropdown.selected = lang.value;
+        setTimeout(() => {
+          this.dropdown.state = false;
+        });
+      }
+    }
+  });
+</script>
+
+</html>
