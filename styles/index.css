@@ -111,7 +111,7 @@ img {
     border-radius: 0;
     box-shadow: none;
     margin-bottom: 32px;
-    margin-left: 20%;
+    margin-left: 0% !important;
   }
 }
 
@@ -159,7 +159,10 @@ img {
     width: 100%;
     border-radius: 0;
     box-shadow: none;
+    margin-left: 0%;
   }
+
+  
 }
 
 .custom-badge {
@@ -187,7 +190,7 @@ img {
     width: 200%;
     height: 2px;
     z-index: -1;
-  }
+  }  
 
   .custom-badge:before {
     position: absolute;
