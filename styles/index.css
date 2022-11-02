@@ -63,8 +63,9 @@ footer {
   margin-top: 34px;
 }
 
-.work-1:hover img, .work-2:hover img, .work-3:hover img {
+.work-1:hover img, .work-2:hover img, .work-3:hover img, .work-4:hover img {
   transform: scale(1.1);
+  border: #D4D4D4 solid 1px;
 }
 
 img {
