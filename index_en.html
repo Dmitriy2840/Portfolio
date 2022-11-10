@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
-  <script type='application/ld+json'> 
+<head>
+  <script type='application/ld+json'>
     {
       "@context": "http://www.schema.org",
-      "@type": "Product",
-      "brand": "Kateryna Makukha",
-      "name": " Web Designer",
-      "image": "https://www.kateryna-makukha-portfolio.website/assets/me.jpg",
-      "description": "Hello, my name is Ekaterina and I am a UI/UX web designer. I design for small, medium and large businesses. I think that the site should fulfill its tasks, be convenient and aesthetic. I love clear interfaces, so I prefer minimalism.",
-      "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.89",
-      "reviewCount": "256",
-      "worstRating": "1",
-      "bestRating": "5"
+        "@type": "Product",
+        "brand": "Kateryna Makukha",
+        "name": "Web Designer",
+        "image": "https://www.kateryna-makukha-portfolio.website/assets/me.jpg",
+        "description": "Web Designer",
+        "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.89",
+        "reviewCount": "256",
+        "worstRating": "1",
+        "bestRating": "5"
       }
     } 
-     </script>
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My portfolio</title>
@@ -42,16 +42,16 @@
               <img :src="`./assets/icons/arrow_${dropdown.state ? 'up' : 'down'}.svg`" alt="arrow_down" class="arrow" />
             </div>
             <a :href="currentLang.link" style="color: white !important">
-            <div v-if="dropdown.state" class="mt-2">
-              <div v-for="lang of dropdownItems" :key="lang.value" class="custom-dropdown-box_item"
-                @click="selectLang(lang)">
-                <img :src="`./assets/icons/${lang.value}.svg`" :alt="lang.value" />
+              <div v-if="dropdown.state" class="mt-2">
+                <div v-for="lang of dropdownItems" :key="lang.value" class="custom-dropdown-box_item"
+                  @click="selectLang(lang)">
+                  <img :src="`./assets/icons/${lang.value}.svg`" :alt="lang.value" />
                   <span>
                     {{ lang.text }}
-                  </span>                  
+                  </span>
                 </div>
-            </div>
-        </a>
+              </div>
+            </a>
           </div>
         </div>
         <div class="col-12 d-xl-none d-flex justify-content-center">
@@ -59,12 +59,12 @@
             <ol class="breadcrumb custom-nav d-flex align-items-center">
               <li class="breadcrumb-item custom-nav__item">
                 <a href="#about">
-                    About me
+                  About me
                 </a>
               </li>
               <li class="breadcrumb-item custom-nav__item">
                 <a href="#works">
-                    My works
+                  My works
                 </a>
               </li>
             </ol>
@@ -78,10 +78,10 @@
           <div class="main-card">
             <img src="./assets/me.jpg" alt="logo" />
             <span class="main-card_title">
-                Kateryna Makukha
+              Kateryna Makukha
             </span>
             <span class="main-card_subtitle">
-                Web Designer
+              Web Designer
             </span>
             <span class="main-card_subtitle">
               <img src="./assets/icons/location.svg" alt="location" />
@@ -107,13 +107,13 @@
         <div class="col-xl-7 col-12">
           <div class="custom-card mb-5">
             <span class="custom-card-title">
-                About me
+              About me
             </span>
             <p class="custom-card-subtitle">
               Hello, my name is Ekaterina and I am a UI/UX web designer.
-               I design for small, medium and large businesses.
-               I think that the site should fulfill its tasks, be convenient and aesthetic.
-               I love clear interfaces, so I prefer minimalism.
+              I design for small, medium and large businesses.
+              I think that the site should fulfill its tasks, be convenient and aesthetic.
+              I love clear interfaces, so I prefer minimalism.
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@
         <div class="col-md-6 col-12 d-flex justify-content-end">
           <div class="custom-card">
             <span class="custom-card-title">
-                SKILLS
+              SKILLS
             </span>
             <ul class="custom-card-subtitle">
               <li>
@@ -130,7 +130,7 @@
               </li>
               <li>
                 Photo
-              </li>              
+              </li>
               <li>
                 Animation
               </li>
@@ -146,13 +146,13 @@
         <div class="col-md-6 col-12 d-flex justify-content-center">
           <div class="custom-card" style="margin-right: 20%;margin-left: 0%">
             <span class="custom-card-title">
-                WORK EXPERIENCE
+              WORK EXPERIENCE
             </span>
             <p class="custom-card-subtitle">
-                I have been developing layouts for a beauty salon for two years,
-                various design of wedding invitations, banners, business cards, price lists.
- 
-                I have been studying web design for a year and a half, I have three projects.
+              I have been developing layouts for a beauty salon for two years,
+              various design of wedding invitations, banners, business cards, price lists.
+
+              I have been studying web design for a year and a half, I have three projects.
             </p>
           </div>
         </div>
@@ -166,20 +166,20 @@
       </div>
       <div class="row works-container">
         <div class="col-xl-6 col-12 d-flex justify-content-center work-1">
-          <a href="https://www.figma.com/file/luXI8W3hp994C0fM5m7XaC/Pet-Shop" title="Go to Figma"><img src="./assets/works/1.jpg"
-              alt="1" /></a>
+          <a href="https://www.figma.com/file/luXI8W3hp994C0fM5m7XaC/Pet-Shop" title="Go to Figma"><img
+              src="./assets/works/1.jpg" alt="1" /></a>
         </div>
         <div class="col-xl-6 col-12 d-flex justify-content-center work-2">
-          <a href="https://www.figma.com/file/yoXICbuEtY9R3Li3fjaXDV/pharmacy" title="Go to Figma"> <img src="./assets/works/2.jpg"
-              alt="2" /></a>
+          <a href="https://www.figma.com/file/yoXICbuEtY9R3Li3fjaXDV/pharmacy" title="Go to Figma"> <img
+              src="./assets/works/2.jpg" alt="2" /></a>
         </div>
         <div class="col-xl-6 col-12 d-flex justify-content-center work-3">
-          <a href="https://www.figma.com/file/5JTlvR8hCl947wJ3PjmoId/Flowers" title="Go to Figma"> <img src="./assets/works/3.jpg"
-              alt="3" /></a>
+          <a href="https://www.figma.com/file/5JTlvR8hCl947wJ3PjmoId/Flowers" title="Go to Figma"> <img
+              src="./assets/works/3.jpg" alt="3" /></a>
         </div>
         <div class="col-xl-6 col-12 d-flex justify-content-center work-4">
-          <a href="https://www.figma.com/file/mLwhPzchnTWgbbcmALPp2G/Test-Park?node-id=0%3A1" title="Go to Figma"> <img src="./assets/works/9.png"
-              alt="3" /></a>
+          <a href="https://www.figma.com/file/mLwhPzchnTWgbbcmALPp2G/Test-Park?node-id=0%3A1" title="Go to Figma"> <img
+              src="./assets/works/9.png" alt="3" /></a>
         </div>
         <div class="col-12">
           <div class="row d-flex justify-content-xl-center ">

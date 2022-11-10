@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
-
-     <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
-     <script type='application/ld+json'> 
+<head>
+  <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+  <script type='application/ld+json'>
       {
         "@context": "http://www.schema.org",
         "@type": "Product",
         "brand": "Kateryna Makukha",
-        "name": " Web Designer",
+        "name": "Web Designer",
         "image": "https://www.kateryna-makukha-portfolio.website/assets/me.jpg",
-        "description": "Hello, my name is Ekaterina and I am a UI/UX web designer. I design for small, medium and large businesses. I think that the site should fulfill its tasks, be convenient and aesthetic. I love clear interfaces, so I prefer minimalism.",
+        "description": "Web Designer",
         "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.89",
@@ -44,10 +43,10 @@
               <img :src="`./assets/icons/arrow_${dropdown.state ? 'up' : 'down'}.svg`" alt="arrow_down" class="arrow" />
             </div>
             <a :href="currentLang.link" style="color: white !important">
-            <div v-if="dropdown.state" class="mt-2">
-              <div v-for="lang of dropdownItems" :key="lang.value" class="custom-dropdown-box_item"
-                @click="selectLang(lang)">
-                <img :src="`./assets/icons/${lang.value}.svg`" :alt="lang.value" />
+              <div v-if="dropdown.state" class="mt-2">
+                <div v-for="lang of dropdownItems" :key="lang.value" class="custom-dropdown-box_item"
+                  @click="selectLang(lang)">
+                  <img :src="`./assets/icons/${lang.value}.svg`" :alt="lang.value" />
                   <span>
                     {{ lang.text }}
                   </span>
@@ -113,9 +112,9 @@
             </span>
             <p class="custom-card-subtitle">
               Привіт мене звуть Катерина, і я UI/UX веб-дизайнер.
-               Розробляю дизайн для малого, середнього та великого бізнесу.
-               Вважаю, що сайт повинен виконувати поставлені завдання, бути зручним та естетичним.
-               Люблю зрозумілі інтерфейси, тому віддаю перевагу мінімалізму.
+              Розробляю дизайн для малого, середнього та великого бізнесу.
+              Вважаю, що сайт повинен виконувати поставлені завдання, бути зручним та естетичним.
+              Люблю зрозумілі інтерфейси, тому віддаю перевагу мінімалізму.
             </p>
           </div>
         </div>
@@ -152,9 +151,9 @@
             </span>
             <p class="custom-card-subtitle">
               Два роки розробляю макети для салону краси,
-               різний дизайн запрошень на весілля, банери, візитки, прайси.
+              різний дизайн запрошень на весілля, банери, візитки, прайси.
 
-               Півтора роки вивчаю веб-дизайн, маю три проекти.
+              Півтора роки вивчаю веб-дизайн, маю три проекти.
             </p>
           </div>
         </div>
@@ -168,20 +167,20 @@
       </div>
       <div class="row works-container">
         <div class="col-xl-6 col-12 d-flex justify-content-center work-1">
-          <a href="https://www.figma.com/file/luXI8W3hp994C0fM5m7XaC/Pet-Shop" title="Перейти до Figma"><img src="./assets/works/1.jpg"
-              alt="1" /></a>
+          <a href="https://www.figma.com/file/luXI8W3hp994C0fM5m7XaC/Pet-Shop" title="Перейти до Figma"><img
+              src="./assets/works/1.jpg" alt="1" /></a>
         </div>
         <div class="col-xl-6 col-12 d-flex justify-content-center work-2">
-          <a href="https://www.figma.com/file/yoXICbuEtY9R3Li3fjaXDV/pharmacy" title="Перейти до Figma"> <img src="./assets/works/2.jpg"
-              alt="2" /></a>
+          <a href="https://www.figma.com/file/yoXICbuEtY9R3Li3fjaXDV/pharmacy" title="Перейти до Figma"> <img
+              src="./assets/works/2.jpg" alt="2" /></a>
         </div>
         <div class="col-xl-6 col-12 d-flex justify-content-center work-3">
-          <a href="https://www.figma.com/file/5JTlvR8hCl947wJ3PjmoId/Flowers" title="Перейти до Figma"> <img src="./assets/works/3.jpg"
-              alt="3" /></a>
+          <a href="https://www.figma.com/file/5JTlvR8hCl947wJ3PjmoId/Flowers" title="Перейти до Figma"> <img
+              src="./assets/works/3.jpg" alt="3" /></a>
         </div>
         <div class="col-xl-6 col-12 d-flex justify-content-center work-4">
-          <a href="https://www.figma.com/file/mLwhPzchnTWgbbcmALPp2G/Test-Park?node-id=0%3A1" title="Перейти до Figma"> <img src="./assets/works/9.png"
-              alt="3" /></a>
+          <a href="https://www.figma.com/file/mLwhPzchnTWgbbcmALPp2G/Test-Park?node-id=0%3A1" title="Перейти до Figma">
+            <img src="./assets/works/9.png" alt="3" /></a>
         </div>
         <div class="col-12">
           <div class="row d-flex justify-content-xl-center ">
@@ -270,4 +269,5 @@
 </script>
 
 </html>
-<div style="display:none" class="embedsocial-hashtag" data-ref="8f1c02f2c86632baf5c939d12e0c09360773c68c"></div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
+<div style="display:none" class="embedsocial-hashtag" data-ref="8f1c02f2c86632baf5c939d12e0c09360773c68c"></div>
+<script> (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
