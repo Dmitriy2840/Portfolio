@@ -2,24 +2,51 @@
 <html lang="en">
 <head>
   <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
-  <script type='application/ld+json'>
-      {
-        "@context": "http://www.schema.org",
-        "@type": "Product",
-        "brand": "Kateryna Makukha",
-        "name": "Web Designer",
-        "image": "https://www.kateryna-makukha-portfolio.website/assets/me.jpg",
-        "description": "Web Designer",
-        "aggregateRating": {
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/", 
+      "@type": "Product", 
+      "name": "Web Designer",
+      "image": "https://www.kateryna-makukha-portfolio.website/assets/me.jpg",
+      "description": "Web Designer",
+      "brand": {
+        "@type": "Brand",
+        "name": "Kateryna Makukha"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.kateryna-makukha-portfolio.website",
+        "priceCurrency": "USD",
+        "price": "100",
+        "priceValidUntil": "2022-11-10",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      },
+      "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.89",
-        "reviewCount": "256",
+        "ratingValue": "5",
+        "bestRating": "5",
         "worstRating": "1",
-        "bestRating": "5"
-        }
-      } 
-       </script>
-    <script src="https://embedsocial.com/cdn/rsh2.js"></script>  
+        "ratingCount": "1",
+        "reviewCount": "1"
+      },
+      "review": {
+        "@type": "Review",
+        "name": "Любые виды дизайна в кротчайшие сроки",
+        "reviewBody": "Любые виды дизайна в кротчайшие сроки",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "datePublished": "2022-11-01",
+        "author": {"@type": "Person", "name": "Kateryna Makukha"},
+        "publisher": {"@type": "Organization", "name": "Kateryna Makukha"}
+      }
+    }
+    </script>
+     
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Моє портфоліо</title>
@@ -267,7 +294,4 @@
     }
   });
 </script>
-
 </html>
-<div style="display:none" class="embedsocial-hashtag" data-ref="8f1c02f2c86632baf5c939d12e0c09360773c68c"></div>
-<script> (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script>
