@@ -1,0 +1,5 @@
+name: GitHubActions-Basics
+on: 
+  push: 
+    branches:   
+      -main
