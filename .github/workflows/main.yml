@@ -25,4 +25,4 @@ jobs:
     - name: Deploy to Server
       run: |
         # ssh -i ssh_key.pem dmak@91.228.56.139 "ls -l"
-        echo ssh_key.pem
+        cat ssh_key.pem
