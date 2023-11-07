@@ -23,5 +23,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
+          sudo su admin
+          Dmitriy2840
           cd ~/public_html/
           git status
