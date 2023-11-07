@@ -25,5 +25,5 @@ jobs:
         script: |          
           # Выйти из режима суперпользователя и выполнить ls -l от имени пользователя admin
           # sudo -u admin ls -l /home/admin/public_html
-          sudo su admin ls -l
-          ls -l
+          sudo su admin cd /home && ls -l
+          df -h
