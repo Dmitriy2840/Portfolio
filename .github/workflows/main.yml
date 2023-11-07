@@ -24,4 +24,6 @@ jobs:
         port: 22
         script: |          
           # Выйти из режима суперпользователя и выполнить ls -l от имени пользователя admin
-          sudo -u admin git branch -v /home/admin/public_html
+          # sudo -u admin ls -l /home/admin/public_html
+          sudo su admin
+          ls -l
