@@ -20,6 +20,6 @@ jobs:
 
     - name: Deploy to Server
       env:
-        SSH_PASSWORD: "718iK2v28aJN"
+        SSH_PASSWORD: "Dmitriy2840"
       run: |
-        sshpass -p $SSH_PASSWORD ssh dmak@91.228.56.139 "ls -l"
+        sshpass -p $SSH_PASSWORD ssh dmak@91.228.56.139 "echo Hello"
