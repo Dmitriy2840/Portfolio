@@ -22,6 +22,10 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
+        script:
+          ls -l
+          ls -l /home/admin/public_html
+          sudo -u admin ls -l /home/admin/public_html
     - name: Print ls -l
       run: |
          ls -l 
