@@ -24,5 +24,4 @@ jobs:
         port: 22
     - name: Deploy to Server
       run: |
-         sudo su admin
-         ls -l
+         sudo -u admin ls -l /home/admin/public_html
