@@ -22,7 +22,7 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
-        script: |
-          sudo -u admin -i
-          sudo cd /home/admin/public_html
-          ls -l
+    - name: Deploy to Server
+      run: |
+         sudo su admin
+         ls -l
