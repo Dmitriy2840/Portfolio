@@ -20,7 +20,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: root
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        key: ${{ secrets.SSH_PRIVATE_KEY_FOR_ROOT }}
         port: 22
         script: |          
           cd /home/admin/public_html
