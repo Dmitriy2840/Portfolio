@@ -1,5 +1,25 @@
-name: GitHubActions-Basics
-on: 
-  push: 
-    branches:   
-      -main
+name: Auto Deploy Server
+
+on:
+  push:
+    branches:
+      - main  # Замените "main" на вашу основную ветку
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Выберите нужное вам окружение
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install sshpass
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y sshpass
+
+    - name: Deploy to Server
+      env:
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+      run: |
+        sshpass -p $SSH_PASSWORD ssh root@91.228.56.139 "cd ~/public_html && git pull origin main"
