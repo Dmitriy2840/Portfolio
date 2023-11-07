@@ -23,7 +23,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          sudo su admin
-          ls -l
-          cd ~/public_html
-          ls -l
+          sudo cd /home/admin/public_html
+          ls -l          
+          git status
