@@ -22,7 +22,6 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
-        script: |          
-          # Выйти из режима суперпользователя и выполнить ls -l от имени пользователя admin
+        script: |         
           # sudo -u admin ls -l /home/admin/public_html
-          sudo sh -c 'cd /home/admin/public_html && git status' 
+          sudo -u admin bash -c 'cd /home/admin/public_html && git status'
