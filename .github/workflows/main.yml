@@ -27,5 +27,5 @@ jobs:
           # sudo -u admin ls -l /home/admin/public_html
           cd ../
           ls -l
-          sudo cd /home/admin/public_html
+          sudo cd -d /home/admin/public_html
           ls -l
