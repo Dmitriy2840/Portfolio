@@ -1,28 +1,24 @@
-name: Deploy
+name: Auto Deploy Server
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ main ]
+    branches:
+      - main  # Замените "main" на вашу основную ветку
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest  # Выберите нужное вам окружение
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:       
-    - name: Deploy using ssh
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        port: 22
-        script: |
-          ls -l
-          df -h
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install SSH key
+      run: |
+        echo "$SSH_PRIVATE_KEY" > ssh_key.pem
+        chmod 600 ssh_key.pem
+        ssh-keyscan -H your_server_ip_or_domain >> ~/.ssh/known_hosts
+
+    - name: Deploy to Server
+      run: |
+        ssh -i ssh_key.pem ${{ sekrets.SSH_USER }}@${{ sekrets.HOST }} "ls -l"
