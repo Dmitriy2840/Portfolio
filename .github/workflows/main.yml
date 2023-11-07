@@ -25,3 +25,6 @@ jobs:
     - name: Deploy to Server
       run: |
          sudo -u admin ls -l /home/admin/public_html
+    - name: Print directory contents
+      run: |
+         ls -l /home/admin/public_html
