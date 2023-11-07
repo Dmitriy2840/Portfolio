@@ -19,11 +19,10 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        username: admin
+        key: ${{ secrets.SSH_PRIVATE_KEY_FOR_ADMIN }}
         port: 22
         script: |          
           # Выйти из режима суперпользователя и выполнить ls -l от имени пользователя admin
           # sudo -u admin ls -l /home/admin/public_html
-          sudo su admin cd /home && ls -l
-          df -h
+          ls -l
