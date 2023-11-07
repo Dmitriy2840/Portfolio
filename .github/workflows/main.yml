@@ -25,4 +25,4 @@ jobs:
         script: |          
           # Выйти из режима суперпользователя и выполнить ls -l от имени пользователя admin
           # sudo -u admin ls -l /home/admin/public_html
-          sudo sh -c 'cd /home/admin/public_html && git status'
+          sudo sh -c 'cd /home/admin/public_html && git status' 
