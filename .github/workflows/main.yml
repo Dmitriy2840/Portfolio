@@ -24,8 +24,6 @@ jobs:
         port: 22
         script: |          
           # Выйти из режима суперпользователя и выполнить ls -l от имени пользователя admin
-          # sudo -u admin ls -l /home/admin/public_html
-          ls -l /home
-          ls -l
-          sudo cd -d /home/admin/public_html
+          # sudo -u admin ls -l /home/admin/public_html          
+          cd -d /home/admin/public_html
           ls -l
