@@ -20,4 +20,4 @@ jobs:
 
     - name: Deploy to Server      
       run: |
-        sshpass -p "Dmitriy2840" ssh dmak@91.228.56.139 "echo Hello"
+        sshpass -p "718iK2v28aJN" ssh root@91.228.56.139 "echo Hello"
