@@ -20,7 +20,7 @@ jobs:
       run: |
         echo "$SSH_PRIVATE_KEY" > ssh_key.pem
         chmod 600 ssh_key.pem
-        ssh-keyscan -H your_server_ip_or_domain >> ~/.ssh/known_hosts
+        ssh-keyscan -H 91.228.56.139 >> ~/.ssh/known_hosts
 
     - name: Deploy to Server
       run: |
