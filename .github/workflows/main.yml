@@ -3,15 +3,18 @@ name: Auto Deploy Server
 on:
   push:
     branches:
-      - main  # Замените "main" на вашу основную ветку
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Выберите нужное вам окружение
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
+
+    - name: Create SSH directory
+      run: mkdir -p ~/.ssh  # Создаем директорию ~/.ssh, если она не существует
 
     - name: Install SSH key
       run: |
