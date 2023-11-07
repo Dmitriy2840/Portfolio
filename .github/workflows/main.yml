@@ -24,17 +24,6 @@ jobs:
         port: 22
         script: |
           ls -l
+          sudo su
           ls -l /home/admin/public_html
           sudo -u admin ls -l /home/admin/public_html
-    - name: Print ls -l
-      run: |
-         ls -l 
-        
-    - name: Print directory contents
-      run: |
-         ls -l /home/admin/public_html
-         
-    - name: Deploy to Server
-      run: |
-         sudo -u admin ls -l /home/admin/public_html
-
