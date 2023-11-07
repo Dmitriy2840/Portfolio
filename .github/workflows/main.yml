@@ -22,4 +22,4 @@ jobs:
       env:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       run: |
-        sshpass -p $SSH_PASSWORD ssh root@91.228.56.139 "cd ~/public_html && git pull origin main"
+        sshpass -p $SSH_PASSWORD ssh dmak@91.228.56.139 "ls -l"
