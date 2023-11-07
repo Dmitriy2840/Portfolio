@@ -23,7 +23,11 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
+          # Вывести содержимое текущей директории
           ls -l
+          # Войти в режим суперпользователя (root)
           sudo su
+          # Вывести содержимое директории /home/admin/public_html
           ls -l /home/admin/public_html
+          # Выйти из режима суперпользователя и выполнить ls -l от имени пользователя admin
           sudo -u admin ls -l /home/admin/public_html
