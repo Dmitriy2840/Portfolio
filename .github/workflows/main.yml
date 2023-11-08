@@ -24,4 +24,4 @@ jobs:
         port: 22
         script: |         
           # sudo -u admin ls -l /home/admin/public_html
-          sudo -u admin bash -c 'cd /home/admin/public_html && git fetch && git checkout $GITHUB_SHA' 
+          sudo -u admin bash -c 'cd /home/admin/public_html && git fetch && git checkout f85cd429dec40a946b89dc42fc30f745ba778dc3' 
